@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>create</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var body = request.body.data;  // JSON input
+    var result = {};
+
+    // Basic validation
+    if (!body.short_description || !body.caller_id) {
+        response.setStatus(400);
+        result.error = "short_description and caller_id are required";
+        response.setBody(result);
+        return;
+    }
+
+    var gr = new GlideRecord('incident');
+    gr.initialize();
+    gr.short_description = body.short_description;
+    gr.caller_id = body.caller_id;
+    gr.urgency = body.urgency || "3";  // default to low urgency
+    gr.insert();
+
+    result.message = "Incident created successfully";
+    result.number = gr.getValue("number");
+    result.sys_id = gr.getUniqueValue();
+
+    response.setStatus(201);
+    response.setBody(result);
+})(request, response);]]></operation_script>
+        <operation_uri>/api/521508/create_incident/create</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/create</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-25 15:19:56</sys_created_on>
+        <sys_id>7a03fc6e83162a50e456bed6feaad32e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>create</sys_name>
+        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_ws_operation_7a03fc6e83162a50e456bed6feaad32e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-25 15:21:20</sys_updated_on>
+        <web_service_definition display_value="create_incident">70e2fc6e83162a50e456bed6feaad32b</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7a03fc6e83162a50e456bed6feaad32e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-25 15:19:55</sys_created_on>
+        <sys_id>8f3334ae83162a50e456bed6feaad3cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-25 15:19:55</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

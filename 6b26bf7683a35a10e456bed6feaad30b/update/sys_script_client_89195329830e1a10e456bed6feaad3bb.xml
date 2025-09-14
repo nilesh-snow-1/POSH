@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Alert for Same Manager for Caller and Assigned To&#13;
+   If the **Caller's Manager** and  **Assigned To's Manager** are the same, display an alert message:  &#13;
+   _"Both Caller and Assigned To's Manager are the same."_&#13;
+</description>
+        <field>u_assignment_to</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Caller and Assigned To Validation 2</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+// Get the values of the fields
+    var victim = g_form.getValue('u_victim'); // 'u_victim' refers to the Caller/Employee Name field
+    var assignedTo = g_form.getValue('u_assignment_to'); // 'u_assignment_to' refers to the Assigned To field
+
+    // Check if both fields have the same value
+    if (victim === assignedTo) {
+        g_form.addInfoMessage('Caller and Assigned To are the same. Please verify if this is correct.');
+    } else {
+        // Clear the message if the values are no longer the same
+        g_form.clearMessages();
+    }
+}   
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-23 18:27:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>89195329830e1a10e456bed6feaad3bb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Caller and Assigned To Validation 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_89195329830e1a10e456bed6feaad3bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825bfdad0000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_89195329830e1a10e456bed6feaad3bb</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:56</sys_created_on>
+        <sys_id>e11f9380839e2e10e456bed6feaad3e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+    </sys_claim>
+</record_update>

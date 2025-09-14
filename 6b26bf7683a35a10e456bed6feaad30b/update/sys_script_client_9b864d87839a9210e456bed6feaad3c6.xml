@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>### **Functionality Overview:**  &#13;
+This client script executes when the `u_status` field changes. It dynamically updates the visibility and mandatory status of reason fields based on the selected status.  &#13;
+&#13;
+1. **Reset All Reason Fields** – Initially, all reason fields are hidden and set to non-mandatory.  &#13;
+2. **Determine the Relevant Field** – A mapping (`statusMap`) links each `u_status` value to its corresponding reason field.  &#13;
+3. **Update the Correct Field** – If a match is found, the relevant field is displayed and set as mandatory, ensuring only the appropriate reason field is visible based on the selected status.&#13;
+&#13;
+</description>
+        <field>u_victim_email</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>PopulateVictimDetailsOnEmailChange2</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var em = g_form.getValue('u_victim_email');
+
+    var ga = new GlideAjax('global.UserAttributes'); //script include call
+    ga.addParam('sysparm_name', 'uservalues'); //function call		
+    ga.addParam('carrier', em); //equalising the var	// email value pawankalyan = abc(email);
+    ga.getXML(pop);
+
+
+    function pop(response) {
+
+        var serverresults = (response.responseXML.documentElement.getAttribute("answer"));
+        alert(serverresults);
+		var result = serverresults.split("&");
+  
+        alert("array value is" +result);
+
+        alert(result[0]);
+        alert(result[1]);
+        alert(result[2]);
+        alert(result[3]);
+        
+
+        g_form.setValue('u_victim_first_name', result[0]);
+        g_form.setValue('u_victim_last_name', result[1]);
+        g_form.setValue('u_manager', result[2]);
+        g_form.setValue('u_victim_phone_number', result[3]);
+
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-10 09:50:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b864d87839a9210e456bed6feaad3c6</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>PopulateVictimDetailsOnEmailChange2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_9b864d87839a9210e456bed6feaad3c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:02</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825c15550000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_9b864d87839a9210e456bed6feaad3c6</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:26:02</sys_created_on>
+        <sys_id>4b1f1780839e2e10e456bed6feaad3fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:02</sys_updated_on>
+    </sys_claim>
+</record_update>

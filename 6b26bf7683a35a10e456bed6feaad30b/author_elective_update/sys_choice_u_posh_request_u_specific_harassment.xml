@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_specific_harassment" table="u_posh_request" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_specific_harassment</element>
+            <name>u_posh_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-18 14:57:27</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>u_specific_harassment</sys_name>
+            <sys_package display_value="Global" source="global">global</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+            <sys_update_name>sys_choice_u_posh_request_u_specific_harassment</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>phy</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Physical intimidation</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:56:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 11:56:41</sys_updated_on>
+            <value>pin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>phy</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pushing, shoving, or Blocking movement</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:57:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 11:57:15</sys_updated_on>
+            <value>psb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>phy</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Physical Assault</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:56:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 11:56:14</sys_updated_on>
+            <value>psa</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>bull</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Constant criticism</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:53:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:20:43</sys_updated_on>
+            <value>ccn</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>bull</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Public humiliation</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:58:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:15:29</sys_updated_on>
+            <value>phu</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>bull</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Spreading rumors</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 11:57:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:21:16</sys_updated_on>
+            <value>sru</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rac</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Derogatory comments</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:01:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:01:46</sys_updated_on>
+            <value>dco</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rac</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Stereotyping based on race</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:02:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:02:17</sys_updated_on>
+            <value>sbr</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rac</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Racial discrimination in providing assignments</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>900</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:02:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:02:37</sys_updated_on>
+            <value>rdp</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>man</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Micromanaging</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1000</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:02:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:16:28</sys_updated_on>
+            <value>mmg</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>man</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unfair workloads</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:03:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:03:21</sys_updated_on>
+            <value>uwo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>man</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Job Threats</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:03:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:16:51</sys_updated_on>
+            <value>jth</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rce</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Religious Insults</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:04:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:17:18</sys_updated_on>
+            <value>rin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rce</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Religious Exclusion</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:04:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:17:44</sys_updated_on>
+            <value>rex</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>rce</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Attire Comments</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:05:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:18:13</sys_updated_on>
+            <value>aco</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>sel</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sexual Advances</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:05:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 12:05:34</sys_updated_on>
+            <value>sda</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>sel</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Appearance Remarks</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:05:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:18:48</sys_updated_on>
+            <value>are</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>sel</dependent_value>
+            <element>u_specific_harassment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Explicit Content</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <sequence>1800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-10-24 12:06:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-10-24 15:19:06</sys_updated_on>
+            <value>eco</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825bfe600000001</claim_timestamp>
+        <metadata_update_name>sys_choice_u_posh_request_u_specific_harassment</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:56</sys_created_on>
+        <sys_id>e51f9380839e2e10e456bed6feaad3f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+    </sys_claim>
+</record_update>

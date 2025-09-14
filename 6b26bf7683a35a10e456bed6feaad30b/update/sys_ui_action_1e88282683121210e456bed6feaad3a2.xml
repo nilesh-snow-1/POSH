@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>When a POSH case is arbitrarily moved to the Cancelled status, implement a script to:&#13;
+&#13;
+Create an incident in the Incident Management table with the following details:&#13;
+Caller: current.u_victim&#13;
+Short Description: current.u_short_notes&#13;
+Description: current.u_detailed_description&#13;
+Assignment Group: dc0db135c332010016194ffe5bba8f23 (Incident Management Team)&#13;
+Save the incident's sys_id in the POSH record's u_incident field.&#13;
+Display a confirmation message:&#13;
+"This POSH request has been escalated as: [Incident Number]".&#13;
+Ensure data integrity and redirect the user appropriately.</comments>
+        <condition>current.u_incident==''&amp;&amp;current.u_status=='8'</condition>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Escalate Incident</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var gr = new GlideRecord('incident');
+gr.initialize();
+// Requirement 1
+gr.caller_id = current.u_victim;
+gr.short_description = current.u_short_notes;
+gr.description = current.u_detailed_description;
+gr.assignment_group = 'dc0db135c332010016194ffe5bba8f23';
+
+// Requirement 2
+if (current.u_type_of_harassment == 'sel') 
+{
+    gr.impact = 1;
+    gr.urgency = 1;
+}
+else 
+{
+    gr.impact = 1;
+    gr.urgency = 2;
+}
+gr.insert();
+
+
+current.u_incident = gr.sys_id;
+current.update();
+action.setRedirectURL(current);
+gs.addInfoMessage("This posh request has been escalated as : "+ gr.number);
+// action.setRedirectURL(gr);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-08 18:26:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1e88282683121210e456bed6feaad3a2</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Escalate Incident</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_ui_action_1e88282683121210e456bed6feaad3a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:55</sys_updated_on>
+        <table>u_posh_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825bfaca0000001</claim_timestamp>
+        <metadata_update_name>sys_ui_action_1e88282683121210e456bed6feaad3a2</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:55</sys_created_on>
+        <sys_id>511f9380839e2e10e456bed6feaad390</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:55</sys_updated_on>
+    </sys_claim>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>1e88282683121210e456bed6feaad3a2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-08 18:25:59</sys_created_on>
+        <sys_id>1c792c2683121210e456bed6feaad316</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-08 18:25:59</sys_updated_on>
+        <table>sys_ui_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Make a Field Read-Only Based on Another Field's Value&#13;
+Configure a field to become **read-only** when a particular value is selected in another field.&#13;
+If 'incident date verifed ' is checked, then 'Date occured' filed should be read only</description>
+        <field>u_incident_date_verified_by_witness</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Field Read-Only Based on Another Field's</name>
+        <order/>
+        <script><![CDATA[    function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+        if (isLoading || newValue === '') {
+            return;
+        }
+        // Get the value of the checkbox
+        var isVerified = g_form.getValue('u_incident_date_verified_by_witness') == 'true';
+
+        // If the checkbox is checked
+        if (isVerified) {
+            // Make 'Date occurred' read-only
+            g_form.setReadOnly('u_date_occcured', true);
+            // Clear any existing info messages
+            g_form.clearMessages();
+            g_form.addInfoMessage('Verification has been completed and Date Occured field is now read-only');
+            
+        } else {
+            // If unchecked, make 'Date occurred' editable
+            g_form.setReadOnly('u_date_occcured', false);
+            // Show an info message
+            g_form.clearMessages();
+            g_form.addErrorMessage('Verification is pending, Hence Date field cannot be made read-only.');
+
+        }
+    }]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 14:46:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>81b99199838e9610e456bed6feaad396</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Field Read-Only Based on Another Field's</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_81b99199838e9610e456bed6feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:04</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825c1f930000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_81b99199838e9610e456bed6feaad396</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:26:04</sys_created_on>
+        <sys_id>2f1f5780839e2e10e456bed6feaad3bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:04</sys_updated_on>
+    </sys_claim>
+</record_update>
