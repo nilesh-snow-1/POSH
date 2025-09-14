@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages>#14: If assigned to &amp; logged in user are same, make ReadOnly description field on incident form.&#13;
+14. **Make Description Field Read-Only** &#13;
+On the Incident form, if the **'Assigned To'** and the **Logged-In User** are the same, make the **Description** field read-only.</messages>
+        <name>Lock Description if Assigned to User</name>
+        <order/>
+        <script><![CDATA[// Client Script Type: onLoad
+// Impersonate to the Assigned User to test this script //
+function onLoad() {
+    // Get the current logged-in user's sys_id
+    var loggedInUser = g_user.userID;
+    // Get the 'Assigned To' field's sys_id
+    var assignedTo = g_form.getValue('u_assignment_to');
+    // Check if the 'Assigned To' is the same as the logged-in user
+    if (assignedTo == loggedInUser) {
+        // Make the Description field read-only
+        g_form.setReadOnly('u_detailed_description', true);
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 15:22:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a7ab0aa683465e10e456bed6feaad3af</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Lock Description if Assigned to User</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_a7ab0aa683465e10e456bed6feaad3af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:55</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825bfb140000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_a7ab0aa683465e10e456bed6feaad3af</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:55</sys_created_on>
+        <sys_id>111f9380839e2e10e456bed6feaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:55</sys_updated_on>
+    </sys_claim>
+</record_update>

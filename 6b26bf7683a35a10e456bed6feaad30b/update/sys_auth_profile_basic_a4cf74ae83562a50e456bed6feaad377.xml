@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>Jira</name>
+        <password>﷞﷟﷒43d1a44483c21210e456bed6feaad3e2﷬﷔1﷬﷭M9GaHlZWd0KyehWXk56rrQ==CDPQVaMOPH4BQEQkwSvxPvXHP28eJjYYmZeUwNjcvHyW_Taw9SBC3ZY6hYlK9RfdPJb8U2I_X6d9BWKC9eBipU-dGWk=﷮﷯</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-25 16:14:58</sys_created_on>
+        <sys_id>a4cf74ae83562a50e456bed6feaad377</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Jira</sys_name>
+        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_a4cf74ae83562a50e456bed6feaad377</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-25 16:14:58</sys_updated_on>
+        <username>sparkz123@gmail.com</username>
+    </sys_auth_profile_basic>
+</record_update>
