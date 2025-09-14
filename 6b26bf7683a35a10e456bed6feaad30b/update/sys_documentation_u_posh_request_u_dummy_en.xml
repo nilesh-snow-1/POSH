@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_dummy" label="Dummy" language="en" table="u_posh_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_dummy</element>
+            <help/>
+            <hint/>
+            <label>Dummy</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <plural>Dummys</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 19:51:23</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Dummy</sys_name>
+            <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+            <sys_update_name>sys_documentation_u_posh_request_u_dummy_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 19:51:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

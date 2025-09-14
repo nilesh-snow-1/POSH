@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_status</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>StatusBasedReasonFields</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) return;
+
+    // List of all reason fields
+const reasonFields = 
+   [
+        "u_reason_for_new",
+        "u_reason_for_in_progress",
+        "u_reason_on_hold",
+        "u_reason_for_resolved",
+        "u_reason_for_closed",
+        "u_reason_for_cancelled"
+    ];
+
+    // Reset all fields to non-mandatory and hidden
+    reasonFields.forEach(field => {
+        g_form.setMandatory(field, false);
+        g_form.setDisplay(field, false);
+    });
+
+    // Mapping of statuses to their corresponding reason fields
+    const statusMap = {
+        "1": "u_reason_for_new",
+        "2": "u_reason_for_in_progress",
+        "3": "u_reason_on_hold",
+        "6": "u_reason_for_resolved",
+        "7": "u_reason_for_closed",
+        "8": "u_reason_for_cancelled"
+    };
+
+    const selectedStatus = g_form.getValue('u_status');
+    const fieldToShow = statusMap[selectedStatus];
+
+    // If a mapped field exists for the selected status, make it mandatory and visible
+    if (fieldToShow) {
+        g_form.setMandatory(fieldToShow, true);
+        g_form.setDisplay(fieldToShow, true);
+    }
+}
+
+// function onChange(control, oldValue, newValue, isLoading) {
+//     if (isLoading) {
+//         return;
+//     }
+
+// // Reset visibility and mandatory state for all fields
+//     g_form.setMandatory("u_reason_for_new", false);
+//     g_form.setDisplay("u_reason_for_new", false);
+
+//     g_form.setMandatory("u_reason_for_in_progress", false);
+//     g_form.setDisplay("u_reason_for_in_progress", false);
+
+//     g_form.setMandatory("u_reason_on_hold", false);
+//     g_form.setDisplay("u_reason_on_hold", false);
+    
+//     g_form.setMandatory("u_reason_for_resolved", false);
+//     g_form.setDisplay("u_reason_for_resolved", false);
+    
+//     g_form.setMandatory("u_reason_for_closed", false);
+//     g_form.setDisplay("u_reason_for_closed", false);
+    
+//     g_form.setMandatory("u_reason_for_cancelled", false);
+//     g_form.setDisplay("u_reason_for_cancelled", false);
+
+    
+//     var cygnet = g_form.getValue('u_status');
+
+//     // Logic for "New" status
+//     if (cygnet === "1") {
+//         g_form.setMandatory("u_reason_for_new", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", true);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", false);
+//         g_form.setDisplay("u_reason_on_hold", false);
+//         g_form.setDisplay("u_reason_for_resolved", false);
+//         g_form.setDisplay("u_reason_for_closed", false);
+//         g_form.setDisplay("u_reason_for_cancelled", false);
+//     }
+//     // Logic for "In Progress" status
+//     else if (cygnet === "2") {
+//       g_form.setMandatory("u_reason_for_in_progress", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", false);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", true);
+//         g_form.setDisplay("u_reason_on_hold", false);
+//         g_form.setDisplay("u_reason_for_resolved", false);
+//         g_form.setDisplay("u_reason_for_closed", false);
+//         g_form.setDisplay("u_reason_for_cancelled", false);
+//     }
+//     // Logic for "On Hold" status
+//     else if (cygnet === "3") {
+//         g_form.setMandatory("u_reason_on_hold", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", false);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", false);
+//         g_form.setDisplay("u_reason_on_hold", true);
+//         g_form.setDisplay("u_reason_for_resolved", false);
+//         g_form.setDisplay("u_reason_for_closed", false);
+//         g_form.setDisplay("u_reason_for_cancelled", false);
+//     }
+    
+//     // Logic for "Resolved" status
+//     else if (cygnet === "6") {
+//         g_form.setMandatory("u_reason_for_resolved", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", false);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", false);
+//         g_form.setDisplay("u_reason_on_hold", false);
+//         g_form.setDisplay("u_reason_for_resolved", true);
+//         g_form.setDisplay("u_reason_for_closed", false);
+//         g_form.setDisplay("u_reason_for_cancelled", false);
+//     }
+    
+//     // Logic for "Closed" status
+//     else if (cygnet === "7") {
+//         g_form.setMandatory("u_reason_for_closed", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", false);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", false);
+//         g_form.setDisplay("u_reason_on_hold", false);
+//         g_form.setDisplay("u_reason_for_resolved", false);
+//         g_form.setDisplay("u_reason_for_closed", true);
+//         g_form.setDisplay("u_reason_for_cancelled", false);
+//     }
+    
+//     // Logic for "Cancelled" status
+//     else if (cygnet === "8") {
+//         g_form.setMandatory("u_reason_for_cancelled", true); // Make "Reason On Hold" mandatory
+//         g_form.setDisplay("u_reason_for_new", false);   // Ensure the field is Display
+//         g_form.setDisplay("u_reason_for_in_progress", false);
+//         g_form.setDisplay("u_reason_on_hold", false);
+//         g_form.setDisplay("u_reason_for_resolved", false);
+//         g_form.setDisplay("u_reason_for_closed", false);
+//         g_form.setDisplay("u_reason_for_cancelled", true);
+//     }
+    
+// }
+
+
+// /*
+// u_reason_for_in_progress
+// u_reason_on_hold
+// u_reason_for_resolved
+// u_reason_for_closed
+// u_reason_for_cancelled
+// */]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-20 11:23:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9dc5da2483c6d210e456bed6feaad396</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>StatusBasedReasonFields</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_9dc5da2483c6d210e456bed6feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825bfdde0000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_9dc5da2483c6d210e456bed6feaad396</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:56</sys_created_on>
+        <sys_id>e51f9380839e2e10e456bed6feaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:56</sys_updated_on>
+    </sys_claim>
+</record_update>

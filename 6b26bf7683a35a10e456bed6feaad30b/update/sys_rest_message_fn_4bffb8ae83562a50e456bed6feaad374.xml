@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Jira">a4cf74ae83562a50e456bed6feaad377</basic_auth_profile>
+        <basic_auth_user/>
+        <content>{&#13;
+  "fields": {&#13;
+    "project": {&#13;
+      "key": "SI"  // Replace this with your actual project key&#13;
+    },&#13;
+    "summary": "Test issue from ServiceNow",&#13;
+    "issuetype": {&#13;
+      "name": "Bug"&#13;
+    }&#13;
+  }&#13;
+}&#13;
+</content>
+        <function_name>Create Bug</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Create Jira Bug [ Create Bug ]</qualified_name>
+        <rest_endpoint>https://sparkz123.atlassian.net/rest/api/3/issue</rest_endpoint>
+        <rest_message display_value="Create Jira Bug">ce2e742e83562a50e456bed6feaad3b0</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-25 16:20:59</sys_created_on>
+        <sys_id>4bffb8ae83562a50e456bed6feaad374</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create Bug</sys_name>
+        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_rest_message_fn_4bffb8ae83562a50e456bed6feaad374</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-25 17:23:10</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>9. **Set 'Assignment Group' Based on Category**  &#13;
+   If the **Category** is set to "Inquiry/Help," automatically set the **Assignment Group** to "Service Desk" in the Incident form.</description>
+        <field>u_category</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Assignment Group for Inquiry</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   // Ensure the form is not loading and the new value is not empty
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   // Check if the category is set to "Inquiry"
+   if (g_form.getValue('u_category') === 'inquiry') {
+      // Set the Assignment Group to "Service Desk"
+      g_form.setValue('u_assignment_group', 'd625dccec0a8016700a222a0f7900d06');
+   } else {
+      // If category is not "Inquiry", clear the Assignment Group
+      g_form.setValue('u_assignment_group', '');
+   }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-23 19:19:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da442325834e1a10e456bed6feaad3f5</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Set Assignment Group for Inquiry</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_da442325834e1a10e456bed6feaad3f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:06</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825c25980000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_da442325834e1a10e456bed6feaad3f5</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:26:06</sys_created_on>
+        <sys_id>402f9780839e2e10e456bed6feaad371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:06</sys_updated_on>
+    </sys_claim>
+</record_update>

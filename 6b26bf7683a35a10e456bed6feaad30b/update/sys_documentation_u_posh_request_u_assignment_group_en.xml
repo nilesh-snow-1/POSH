@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_assignment_group" label="Assignment Group" language="en" table="u_posh_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_assignment_group</element>
+            <help/>
+            <hint/>
+            <label>Assignment Group</label>
+            <language>en</language>
+            <name>u_posh_request</name>
+            <plural>Assignment Groups</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-18 15:18:45</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Assignment Group</sys_name>
+            <sys_package display_value="Global" source="global">global</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+            <sys_update_name>sys_documentation_u_posh_request_u_assignment_group_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-06-18 09:25:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825c034a0000001</claim_timestamp>
+        <metadata_update_name>sys_documentation_u_posh_request_u_assignment_group_en</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:25:57</sys_created_on>
+        <sys_id>f91fd380839e2e10e456bed6feaad358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:25:57</sys_updated_on>
+    </sys_claim>
+</record_update>

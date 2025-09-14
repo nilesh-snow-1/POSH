@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Assignment 20  **Modify Choices Dynamically**  &#13;
+Add or remove a choice option in a dropdown field based on a condition.&#13;
+</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>ToggleHarassmentOptions</name>
+        <order/>
+        <script><![CDATA[// Function to add or remove a choice based on a condition
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    // Exit the function if the form is still loading or the new value is empty
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Determine the logic based on the newValue
+	var latestValue = g_form.getValue('u_active');
+	
+    if (latestValue === 'true') {
+        // Add "Active Choice" and remove "IN Active Choice"
+        g_form.addOption('u_type_of_harassment', 'act', 'Active Choice', 3);
+        g_form.removeOption('u_type_of_harassment', 'inact');
+    } else {
+        // Add "IN Active Choice" and remove "Active Choice"
+        g_form.addOption('u_type_of_harassment', 'inact', 'IN Active Choice', 5);
+        g_form.removeOption('u_type_of_harassment', 'act');
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 13:34:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ecf2f9a683c25e10e456bed6feaad3ff</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>ToggleHarassmentOptions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_client_ecf2f9a683c25e10e456bed6feaad3ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:02</sys_updated_on>
+        <table>u_posh_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
+        <claim_timestamp>197825c16650000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_ecf2f9a683c25e10e456bed6feaad3ff</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Posh Request</previous_claim_name>
+        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-18 09:26:02</sys_created_on>
+        <sys_id>cf1f5780839e2e10e456bed6feaad30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-18 09:26:02</sys_updated_on>
+    </sys_claim>
+</record_update>
