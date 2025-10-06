@@ -4,7 +4,7 @@
         <applies_extended>false</applies_extended>
         <condition/>
         <description>10. **Auto-Populate User Details**  &#13;
- Implement a feature to auto-populate user details without requiring a callback.</description>
+ Implement a feature to auto-populate user details without requiring a callback. Tester</description>
         <field>u_victim</field>
         <global>true</global>
         <isolate_script>true</isolate_script>
@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7dac3a35838e5a10e456bed6feaad380</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Auto-Populate User Details</sys_name>
         <sys_overrides/>
         <sys_package display_value="Global" source="global">global</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_script_client_7dac3a35838e5a10e456bed6feaad380</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-09-24 23:17:17</sys_updated_on>
+        <sys_updated_on>2025-10-06 08:13:53</sys_updated_on>
         <table>u_posh_request</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
