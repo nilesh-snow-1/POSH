@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.query_hints=true,email_client=true,hasWorkflow=true,live_feed=true,use_document_viewer=true" audit="true" db_object_id="1619c077e1f222108bb2327e62588672" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+        <element label="Send to Jira" max_length="40" name="u_send_to_jira" type="boolean"/>
+    </element>
+</database>
