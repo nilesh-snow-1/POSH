@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="34fd21a7c3987210d03c514ed4013155" sys_domain="global" table="u_posh_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-06 08:15:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fcfd21a7c3987210d03c514ed4013155</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="u_posh_request" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">34fd21a7c3987210d03c514ed4013155</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">554512668358aa50e456bed6feaad37c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-06 08:15:56</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-06 08:15:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3cfd21a7c3987210d03c514ed4013156</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="u_posh_request" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">34fd21a7c3987210d03c514ed4013155</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">994512668358aa50e456bed6feaad37b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-06 08:15:56</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-06 08:15:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8fd21a7c3987210d03c514ed4013176</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="u_posh_request" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">34fd21a7c3987210d03c514ed4013155</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="u_posh_request" sys_domain="global" view="74fd21a7c3987210d03c514ed4013148">dd4512668358aa50e456bed6feaad37a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-06 08:15:57</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>u_posh_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-06 08:15:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>34fd21a7c3987210d03c514ed4013155</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_posh_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+            <sys_update_name>sys_ui_form_sections_34fd21a7c3987210d03c514ed4013155</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-06 08:15:56</sys_updated_on>
+            <sys_user/>
+            <view display_value="Test 2" name="Test_2">74fd21a7c3987210d03c514ed4013148</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
