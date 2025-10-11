@@ -10,7 +10,7 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>LIST</link_type>
+        <link_type>FILTER</link_type>
         <map_page/>
         <mobile_title>Assigned to me</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7a3d05cc834a1210e456bed6feaad3ac</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Assigned to me</sys_name>
         <sys_overrides/>
         <sys_package display_value="Global" source="global">global</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_app_module_7a3d05cc834a1210e456bed6feaad3ac</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 11:25:41</sys_updated_on>
+        <sys_updated_on>2025-10-11 11:31:35</sys_updated_on>
         <timeline_page/>
         <title>Assigned to me</title>
         <u_approval_info/>
