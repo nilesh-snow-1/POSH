@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>Assigment  5&#13;
@@ -50,7 +50,7 @@ Make all fields read-only when the state is set to "Cancelled" on the form load.
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9cdfa4c183c65610e456bed6feaad3c0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Set Fields Read-Only on Incident Cancell</sys_name>
         <sys_overrides/>
         <sys_package display_value="Global" source="global">global</sys_package>
@@ -58,7 +58,7 @@ Make all fields read-only when the state is set to "Cancelled" on the form load.
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_script_client_9cdfa4c183c65610e456bed6feaad3c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-18 09:25:55</sys_updated_on>
+        <sys_updated_on>2025-10-12 16:01:19</sys_updated_on>
         <table>u_posh_request</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
