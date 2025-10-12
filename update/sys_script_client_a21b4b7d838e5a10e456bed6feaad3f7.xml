@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>11. **Assign Ticket to 'Software' Group Based on Keywords**  &#13;
@@ -41,7 +41,7 @@ Use `include()` for keyword matching.</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a21b4b7d838e5a10e456bed6feaad3f7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>AutoAssignToGroupPerShortDescription</sys_name>
         <sys_overrides/>
         <sys_package display_value="Global" source="global">global</sys_package>
@@ -49,7 +49,7 @@ Use `include()` for keyword matching.</description>
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_script_client_a21b4b7d838e5a10e456bed6feaad3f7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-18 09:26:05</sys_updated_on>
+        <sys_updated_on>2025-10-12 15:58:46</sys_updated_on>
         <table>u_posh_request</table>
         <type>onSubmit</type>
         <ui_type>0</ui_type>
