@@ -10,7 +10,7 @@
         <entered_run_start/>
         <entered_time/>
         <max_drift/>
-        <ml_capability_definition display_value="">f8d74bdddbc18850a6d183243996194d</ml_capability_definition>
+        <ml_capability_definition display_value="Closed alert similarity">f8d74bdddbc18850a6d183243996194d</ml_capability_definition>
         <ml_solution/>
         <name>Closed alert similarity</name>
         <offset/>
@@ -24,23 +24,23 @@
         <run_end/>
         <run_month/>
         <run_period>1970-01-31 00:00:00</run_period>
-        <run_start>2025-10-09 18:23:48</run_start>
+        <run_start>2025-10-13 16:23:47</run_start>
         <run_time/>
         <run_type>periodically</run_type>
         <run_weekinmonth/>
         <solution_definition/>
         <sys_class_name>ml_training_request_schedule</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-09 18:23:48</sys_created_on>
-        <sys_id>42d5d76c83247210e4569650ceaad3e4</sys_id>
+        <sys_created_on>2025-10-13 16:23:47</sys_created_on>
+        <sys_id>8bb02bf583603e10e4569650ceaad310</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Closed alert similarity</sys_name>
         <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
-        <sys_update_name>ml_training_request_schedule_42d5d76c83247210e4569650ceaad3e4</sys_update_name>
+        <sys_update_name>ml_training_request_schedule_8bb02bf583603e10e4569650ceaad310</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-09 18:23:48</sys_updated_on>
+        <sys_updated_on>2025-10-13 16:23:47</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </ml_training_request_schedule>
