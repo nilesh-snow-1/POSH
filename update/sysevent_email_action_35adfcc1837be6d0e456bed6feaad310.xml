@@ -53,7 +53,7 @@
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
-        <recipient_groups name="POSH Support">db3ca84083c61210e456bed6feaad305</recipient_groups>
+        <recipient_groups>db3ca84083c61210e456bed6feaad305</recipient_groups>
         <recipient_users>6816f79cc0a8016401c5a33be04be441</recipient_users>
         <reply_to/>
         <send_self>true</send_self>
@@ -70,7 +70,7 @@
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Demo </sys_name>
         <sys_overrides/>
-        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sysevent_email_action_35adfcc1837be6d0e456bed6feaad310</sys_update_name>
