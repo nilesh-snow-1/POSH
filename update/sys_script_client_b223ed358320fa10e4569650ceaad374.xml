@@ -14,7 +14,7 @@
     // Allow execution on load so decorations persist after Save/Submit.
     if (isTemplate || (newValue === '' && !isLoading)) return;
 
-    // Day 2 on scripting
+    // Day 2 on scriptingXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     var act = g_form.getValue('u_active');
     var isLoad = (isLoading === true); // suppress noisy messages during load
 
@@ -70,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b223ed358320fa10e4569650ceaad374</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Active Status</sys_name>
         <sys_overrides/>
         <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
@@ -78,7 +78,7 @@
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_script_client_b223ed358320fa10e4569650ceaad374</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 10:27:11</sys_updated_on>
+        <sys_updated_on>2025-10-13 10:29:52</sys_updated_on>
         <table>u_posh_request</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
