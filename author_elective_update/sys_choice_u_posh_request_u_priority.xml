@@ -111,18 +111,4 @@
             <value>5</value>
         </sys_choice>
     </sys_choice>
-    <sys_claim action="INSERT_OR_UPDATE">
-        <claim_owner_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</claim_owner_scope>
-        <claim_timestamp>197825c29060000001</claim_timestamp>
-        <metadata_update_name>sys_choice_u_posh_request_u_priority</metadata_update_name>
-        <previous_claim_app_version>1.0.0</previous_claim_app_version>
-        <previous_claim_name>Posh Request</previous_claim_name>
-        <previous_claim_scope>6b26bf7683a35a10e456bed6feaad30b</previous_claim_scope>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-06-18 09:26:07</sys_created_on>
-        <sys_id>482f9780839e2e10e456bed6feaad3e0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-18 09:26:07</sys_updated_on>
-    </sys_claim>
 </record_update>
