@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>11. **Assign Ticket to 'Software' Group Based on Keywords**  &#13;
@@ -13,43 +13,44 @@ Use `include()` for keyword matching.</description>
         <name>AutoAssignToGroupPerShortDescription</name>
         <order/>
         <script><![CDATA[function onSubmit() {
-   //Type appropriate comment here, and begin script below
-   {
+  // Keywords to check in the Short Description (adjust as needed)
+  var keywords = ['software', 'application'];
 
-    // Keywords to check in the Short Description
-    var keywords = ['software', 'application'];
-    var shortDescription = g_form.getValue('u_short_notes'); // Get the Short Description field value
+  // Use your actual field; OOTB is 'short_description'
+  var text = (g_form.getValue('u_short_notes') || '').toLowerCase();
 
-    // Check if the Short Description contains any of the keywords
-    var shouldAssignToSoftwareGroup = keywords.some(function(keyword) {
-        return shortDescription.toLowerCase().includes(keyword);
-    });
+  var hasMatch = keywords.some(function (k) {
+    return text.includes(k);
+  });
 
-    // If a keyword is found, set the Assignment Group to 'Software'
-    if (shouldAssignToSoftwareGroup) {
-        var softwareGroupSysId = 'db3ca84083c61210e456bed6feaad305'; // Replace with the sys_id of the 'Software' group
-        g_form.setValue('u_assignment_group', db3ca84083c61210e456bed6feaad305);
-        g_form.addInfoMessage('Ticket has been assigned to the Software group based on the keywords.');
-    }
+  if (hasMatch) {
+    // Use the actual sys_id of your Software group
+    var softwareGroupSysId = 'db3ca84083c61210e456bed6feaad305';
 
+    // Use 'assignment_group' if it's a normal Task table
+    g_form.setValue('u_assignment_group', softwareGroupSysId);
+
+    g_form.addInfoMessage('Assigned to Software group based on keywords.');
+  }
+
+  return true; // allow the submit to proceed
 }
-   
-}]]></script>
+]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-24 12:02:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a21b4b7d838e5a10e456bed6feaad3f7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>AutoAssignToGroupPerShortDescription</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+        <sys_package display_value="Global" source="global">global</sys_package>
         <sys_policy/>
         <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
         <sys_update_name>sys_script_client_a21b4b7d838e5a10e456bed6feaad3f7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-18 09:26:05</sys_updated_on>
+        <sys_updated_on>2025-10-14 06:55:31</sys_updated_on>
         <table>u_posh_request</table>
         <type>onSubmit</type>
         <ui_type>0</ui_type>
