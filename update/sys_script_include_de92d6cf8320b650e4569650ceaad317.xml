@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.TestFilterDynamic</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>TestFilterDynamic</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TestFilterDynamic = Class.create();
+TestFilterDynamic.prototype = {
+    initialize: function() {
+
+    },
+
+    getassignedusers: function() {
+
+        var grp = current.variables.assignment_group.sys_id;
+
+        var gr = new GlideRecord('sys_user_grmember');
+        gr.addQuery('u_assignment_group', grp);
+        gr.query();
+
+        var member = '';
+
+        while (gr.next()) {
+            member += ',' + gr.user.sys_id;
+        }
+
+        return 'sys_idIN' + member;
+    },
+
+    type: 'TestFilterDynamic'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 07:55:53</sys_created_on>
+        <sys_id>de92d6cf8320b650e4569650ceaad317</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>TestFilterDynamic</sys_name>
+        <sys_package display_value="Posh Request" source="6b26bf7683a35a10e456bed6feaad30b">6b26bf7683a35a10e456bed6feaad30b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Posh Request">6b26bf7683a35a10e456bed6feaad30b</sys_scope>
+        <sys_update_name>sys_script_include_de92d6cf8320b650e4569650ceaad317</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 08:27:47</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>de92d6cf8320b650e4569650ceaad317</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 07:55:53</sys_created_on>
+        <sys_id>86d25a4383ac3250e4569650ceaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 07:55:53</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
